@@ -21,7 +21,13 @@
     "test:acceptance": "NODE_ENV=qa jest test/acceptance/* --forceExit --maxWorkers=4",
     "test:coverage": "NODE_ENV=qa jest packages/* --forceExit --maxWorkers=4 --coverage",
     "test:mid-level": "NODE_ENV=qa jest test/mid-level/* --forceExit --maxWorkers=4",
-    "test:unit": "NODE_ENV=qa jest packages/* --forceExit --maxWorkers=4"
+    "test:unit": "NODE_ENV=qa jest packages/* --forceExit --maxWorkers=4",
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
@@ -41,8 +47,8 @@
   },
   "homepage": "https://github.com/pleo-io/node-challenge#readme",
   "dependencies": {
-    "@nc/domain-user": "0.0.0",
     "@nc/domain-expense": "0.0.0",
+    "@nc/domain-user": "0.0.0",
     "@nc/utils": "0.0.0",
     "config": "^3.3.0",
     "dotenv": "^10.0.0",
@@ -60,6 +66,8 @@
     "@types/supertest": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.24.0",
