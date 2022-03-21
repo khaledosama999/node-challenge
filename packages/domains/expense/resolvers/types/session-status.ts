@@ -1,0 +1,6 @@
+import { EXPENSES_STATUS } from '../../types';
+
+export default {
+  PENDING: EXPENSES_STATUS.PENDING,
+  PROCESSED: EXPENSES_STATUS.PROCESSED,
+};

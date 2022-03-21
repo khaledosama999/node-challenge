@@ -1,0 +1,43 @@
+enum EXPENSES_STATUS {
+  PENDING
+  PROCESSED
+}
+
+enum EXPENSES_SORT_KEYS {
+  DATE_CREATED
+}
+
+type Expense {
+  id: String!
+  merchant_name: String!
+  amount_in_cents: Int!
+  currency: String!
+  user_id: String!
+  date_created: String!
+  status: EXPENSES_STATUS!
+}
+
+type Pagination {
+  totalCount: Int
+  pages: Int
+}
+
+input GetUserExpensesInput {
+  userId: String! @constraint(format: "uuid")
+  status: EXPENSES_STATUS
+  startDate: String @constraint(format: "date")
+  endDate: String @constraint(format: "date")
+  sortBy: EXPENSES_SORT_KEYS
+  order: Int @constraint(min: -1, max: 1)
+  limit: Int @constraint(min: 1)
+  page: Int @constraint(min: 1)
+}
+
+type GetUserExpensesResponse {
+  expenses: [Expense]!
+  pagination: Pagination 
+}
+
+type Query {
+  getUserExpenses(getUserExpensesInput: GetUserExpensesInput): GetUserExpensesResponse!
+}
