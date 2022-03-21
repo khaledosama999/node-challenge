@@ -7,13 +7,14 @@ module.exports = {
     port: 5432,
     database: 'challenge',
   },
+  env: 'development',
   debug: {
     stackSize: 4,
   },
   i18next: {
     translationFilePath: path.resolve(__dirname, '..', 'locales/{{lng}}/{{ns}}.json'),
   },
-  host: 'localhost:9001',
+  host: `localhost:${process.env.PORT || 9001}`,
   https: {
     enabled: false,
   },
