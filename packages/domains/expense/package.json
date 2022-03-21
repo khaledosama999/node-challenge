@@ -3,5 +3,15 @@
     "version": "0.0.0",
     "description": "Expenses domain logic",
     "private": true,
-    "dependencies": {}
+    "dependencies": {
+      "@nc/utils": "^0.0.0",
+      "express": "^4.17.0",
+      "http-status-codes": "^2.2.0",
+      "joi": "^17.6.0",
+      "lodash": "^4.17.21",
+      "swagger-ui-express": "^4.3.0"
+    },
+    "devDependencies": {
+      "@types/lodash": "^4.14.180"
+    }
   }
