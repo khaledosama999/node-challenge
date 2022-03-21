@@ -29,6 +29,7 @@ module.exports = {
   setupFilesAfterEnv: [
     '<rootDir>/test/utils/jest/config-injector.ts',
     '<rootDir>/test/utils/jest/error-matchers.ts',
+    '<rootDir>/test/utils/jest/is-sorted.ts',
   ],
   testEnvironment: 'node',
 };
